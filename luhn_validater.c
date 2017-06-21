@@ -64,7 +64,7 @@ void runChecker(char * inputNum)
     {
         oddSum = oddSum + reversecardNum[i];
     }
-    
+
     int storeVal = 0;
     int firstPlace = 0;
     int secondPlace = 0;
@@ -84,8 +84,14 @@ void runChecker(char * inputNum)
             secondPlace = storeVal;
             sumPlace = firstPlace + secondPlace;
         }
+        
+        else
+        {
+            evenSum = evenSum + storeVal;
+        }
         evenSum = evenSum + sumPlace;
     }
+    
     
     totalSum = oddSum + evenSum;
     
@@ -98,7 +104,4 @@ void runChecker(char * inputNum)
     {
         printf("No, this is an invalid card\n");
     }
-    
-    
 }
-
